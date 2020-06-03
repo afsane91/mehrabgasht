@@ -1,0 +1,214 @@
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: bold;
+  src: url("/fonts/IRANSansWeb_Bold.eot");
+  src: url("/fonts/IRANSansWeb_Bold.eot") format("embedded-opentype"),
+    url("/fonts/IRANSansWeb_Bold.woff2") format("woff2"), url("/fonts/IRANSansWeb_Bold.woff") format("woff"),
+    url("/fonts/IRANSansWeb_Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/IRANSansWeb_Light.eot");
+  src: url("/fonts/IRANSansWeb_Light.eot") format("embedded-opentype"),
+    url("/fonts/IRANSansWeb_Light.woff2") format("woff2"), url("/fonts/IRANSansWeb_Light.woff") format("woff"),
+    url("/fonts/IRANSansWeb_Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/IRANSansWeb_UltraLight.eot");
+  src: url("/fonts/IRANSansWeb_UltraLight.eot") format("embedded-opentype"),
+    url("/fonts/IRANSansWeb_UltraLight.woff2") format("woff2"), url("/fonts/IRANSansWeb_UltraLight.woff") format("woff"),
+    url("/fonts/IRANSansWeb_UltraLight.ttf") format("truetype");
+}
+
+* {
+  font-family: IRANSans !important;
+  font-weight: lighter;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #000;
+}
+
+/* header */
+
+.header {
+  
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  text-align: right;
+  color: #bfc2c9;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: right;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+  color:#f2ffff;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #d5d1d1;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+background: #d5d1d1;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+    color: #bfc2c9;
+    font-weight: bold;
+  }
+  .header .menu {
+    clear: none;
+    float: left;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+.userInfo-box {
+  box-shadow: 10px 18px 52px -58px rgba(0, 0, 0, 0.75);
+  margin: 1rem;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.userInfo-box-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container {
+  background: #efefef;
+  padding: "0";
+}
+.userInfo-box p {
+  color: #757575;
+  font-size: 14px;
+}
+.img {
+  border-radius: 50%;
+  width: 70px;
+}
+@media (min-width: 768px){
+.container {
+    max-width: 951px !important;
+}}
+@media (min-width: 768px){
+.container {
+    max-width: 1200px !important;
+}}
